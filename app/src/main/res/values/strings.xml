@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">TaskManagerKotlin</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign up</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login_as_admin">Login as Admin</string>
+    <string name="toast_admin">The admin username and password are incorrect!</string>
+    <string name="toast_login">The Username or Password entered are incorrect</string>
+    <string name="empty_task_list">You Don\'t Have Any Tasks.</string>
+    <string name="fab_insert">  Insert  </string>
+    <string name="fab_delete">  Delete  </string>
+    <string name="fab_logOut">  LogOut  </string>
+    <string name="search">Search</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="todo">Todo</string>
+    <string name="doing">Doing</string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="delete">Delete</string>
+    <string name="toast_insert">Enter above Data</string>
+    <string name="date_picker_title">Date of task:</string>
+    <string name="time_picker_title">Time of task:</string>
+    <string name="edit">Edit</string>
+    <string name="share">Share</string>
+    <string name="shareMassage"> The Task is %1$s
+       Description is %2$s, Date is %3$s , State is %4$s.
+    </string>
+    <string name="delete_all_title">Delete all tasks:</string>
+    <string name="no_tasks">There aren\'t any Tasks.</string>
+    <string name="delete_all_question">Are you sure?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="exit">Exit</string>
+</resources>

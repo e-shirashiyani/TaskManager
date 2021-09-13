@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.fragment.EditTaskFragment"
+        android:background="#034706">
+
+        <RelativeLayout
+            android:id="@+id/taskLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/task_picture"
+                android:layout_width="110dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_add_image"
+                android:layout_alignParentRight="true" />
+
+            <ImageView
+                android:id="@+id/btn_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/task_picture"
+                android:layout_alignBottom="@id/description_form_edit"
+                android:layout_alignStart="@+id/task_picture"
+                android:src="@drawable/ic_camera"
+                android:layout_alignParentRight="true"
+                android:layout_alignLeft="@+id/task_picture" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/title_form_edit"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@id/task_picture"
+                android:layout_toLeftOf="@id/task_picture"
+                android:hint="@string/title"
+                android:padding="5dp"
+                android:textColorHint="#FF9800"
+                app:boxStrokeColor="#FF9800"
+                app:endIconTint="#FF9800"
+                app:hintTextColor="#FF9800"
+                app:startIconTint="#FF9800">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/title_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#8BC34A"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/description_form_edit"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/task_picture"
+                android:layout_below="@id/title_form_edit"
+                android:hint="@string/description"
+                android:padding="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/task_picture"
+                android:textColorHint="#FF9800"
+                app:boxStrokeColor="#FF9800"
+                app:endIconTint="#FF9800"
+                app:hintTextColor="#FF9800"
+                app:startIconTint="#FF9800">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/description_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#8BC34A"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_pickerBtn_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/taskLayout"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/btn_date_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:text="@string/date"
+                android:backgroundTint="#6E9F36"
+                android:layout_marginRight="2dp" />
+
+            <Button
+                android:id="@+id/btn_time_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#6E9F36"
+
+                android:text="@string/time"
+                android:layout_marginLeft="2dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/radio_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_pickerBtn_edit"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:layout_below="@id/layout_pickerBtn_edit"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioBtn_todo_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#8BC34A"
+
+                        android:text="@string/todo" />
+
+                    <RadioButton
+                        android:id="@+id/radioBtn_doing_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#8BC34A"
+
+                        android:text="@string/doing" />
+
+                    <RadioButton
+                        android:id="@+id/radioBtn_done_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#8BC34A"
+                        android:text="@string/done" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/share"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/ic_share" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radio_layout"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/btn_delete_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:text="@string/delete"
+                android:textAllCaps="false"
+                android:backgroundTint="#FB9F17"
+
+                android:layout_marginRight="2dp" />
+
+            <Button
+                android:id="@+id/btn_edit_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:text="@string/edit"
+                android:backgroundTint="#FB9F17"
+
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_save_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:backgroundTint="#FB9F17"
+
+                android:layout_weight="1"
+                android:text="@string/save"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>
